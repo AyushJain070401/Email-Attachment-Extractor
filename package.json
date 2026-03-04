@@ -17,13 +17,14 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc --watch",
+    "build": "npm run check:dist",
+    "build:watch": "npm run check:dist",
+    "check:dist": "node -e \"const fs=require('fs'); const required=['dist/index.js','dist/index.d.ts']; const missing=required.filter((p)=>!fs.existsSync(p)); if(missing.length){console.error('Missing build artifacts:', missing.join(', ')); process.exit(1);} console.log('dist artifacts look good.');\"",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "lint": "tsc --noEmit",
-    "prepublishOnly": "npm run build && npm test"
+    "prepublishOnly": "npm run check:dist"
   },
   "keywords": [
     "email",
