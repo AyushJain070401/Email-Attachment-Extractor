@@ -1,6 +1,6 @@
 {
   "name": "email-attachment-extractor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Extracts only real email attachments from raw RFC822 emails, intelligently filtering out signature images, inline images, logos, and tracking pixels.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
