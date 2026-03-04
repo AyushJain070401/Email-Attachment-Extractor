@@ -1,0 +1,43 @@
+{
+  "name": "email-attachment-extractor",
+  "version": "1.0.1",
+  "description": "Extracts only real email attachments from raw RFC822 emails, intelligently filtering out signature images, inline images, logos, and tracking pixels.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": ["email", "attachment", "extractor", "mailparser", "mime", "rfc822", "filter", "inline", "signature", "nodejs", "typescript"],
+  "author": "",
+  "license": "MIT",
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": { "mailparser": "^3.7.1" },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/mailparser": "^3.4.4",
+    "@types/node": "^20.11.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": ["**/tests/**/*.test.ts"],
+    "collectCoverageFrom": ["src/**/*.ts"]
+  }
+}
