@@ -11,7 +11,11 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
@@ -21,11 +25,27 @@
     "lint": "tsc --noEmit",
     "prepublishOnly": "npm run build && npm test"
   },
-  "keywords": ["email", "attachment", "extractor", "mailparser", "mime", "rfc822", "filter", "inline", "signature", "nodejs", "typescript"],
-  "author": "",
+  "keywords": [
+    "email",
+    "attachment",
+    "extractor",
+    "mailparser",
+    "mime",
+    "rfc822",
+    "filter",
+    "inline",
+    "signature",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "Ayush Jain <ayushjain070401@gmail.com> (https://github.com/ayushjain070401)",
   "license": "MIT",
-  "engines": { "node": ">=18.0.0" },
-  "dependencies": { "mailparser": "^3.7.1" },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "mailparser": "^3.7.1"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/mailparser": "^3.4.4",
@@ -37,7 +57,11 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "testMatch": ["**/tests/**/*.test.ts"],
-    "collectCoverageFrom": ["src/**/*.ts"]
+    "testMatch": [
+      "**/tests/**/*.test.ts"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ]
   }
 }
