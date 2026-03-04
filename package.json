@@ -40,6 +40,14 @@
     "typescript"
   ],
   "author": "Ayush Jain <ayushjain070401@gmail.com> (https://github.com/ayushjain070401)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AyushJain070401/Email-Attachment-Extractor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AyushJain070401/Email-Attachment-Extractor/issues"
+  },
+  "homepage": "https://github.com/AyushJain070401/Email-Attachment-Extractor#readme",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
